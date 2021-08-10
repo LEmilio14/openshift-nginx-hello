@@ -1,6 +1,6 @@
 FROM alpine:3.12.0
 
-LABEL maintainer="NGINX Docker Maintainers <docker-maint@nginx.com>"
+LABEL maintainer="SMC Cloud Architect"
 
 ENV NGINX_VERSION 1.16.1
 
