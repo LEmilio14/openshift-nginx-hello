@@ -140,7 +140,6 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY hello.conf /etc/nginx/conf.d/
 COPY index.html /usr/share/nginx/html/
 COPY hls.js /usr/share/nginx/html/
-COPY SMC-RH-3-node-compact-cluster_JumpStart.png /usr/share/nginx/html/
 COPY OCP-Topology.png /usr/share/nginx/html/
 COPY MinIO-Browser-m.png /usr/share/nginx/html/
 COPY SCC-1.png /usr/share/nginx/html/
