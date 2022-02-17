@@ -153,8 +153,8 @@
 </ul>
 <script src="hls.js"></script>
       <center>
-          <h2 id=home>Supermicro MWC Video-on-Demand Demo</h2>
-          <h3> Welcome Mai to the Supermicro at Hall 5, Booth 5D66</h3>
+          <h2 id=home>Supermicro MWC'22 Video-on-Demand Demo</h2>
+          <h3> Welcome to the Supermicro Exhibit, located in Hall 5, Booth 5D66</h3>
           <h4 style='color: red; font-weight: normal;'> The video below is streaming from our OpenShift 3-Node Compact Cluster, powered by X12 BigTwin</h4>
           <!--center>  <h2> Hello World!</h2> </center //--> 
           <video height="600" id="video" controls autoplay loop muted class="videoCentered"></video>
@@ -203,13 +203,13 @@
        <ol type="1">
         <li> Admins can create and manage storage (Back Stores), with the Multi-Cloud Object Gateway</li>
         <ul class="news" style="padding: 20px; margin-left: 35px;width: 90%;">
-            <li> Users will be able to create their own Buckets, but cannot create Back Stores from public cloud or on-premise storage.</li>
+            <li> We encourage our customers and partners to test drive our solution on display by creating their own test website, starting with their own storage buckets. This does not include the ability to create Back Stores from the public cloud or pre-existing on-premise storage.</li>
         </ul>
         <center><img alt="MCG" src="MCG-SMC-RH-OpenShift-3-node-compact-cluster.gif" width="1000">Figure 1: OpenShift Multi-Cloud Object Gateway</center><br> 
-        <li> OpenShift Data Foundation (aka OpenShift Container Storage) will be configured to replicate objects by default</li>
+        <li> OpenShift Data Foundation (aka OpenShift Container Storage) can be configured to replicate objects by default</li>
         <ul class="news" style="padding: 20px; margin-left: 35px;width: 90%;">
             <li> Only admins can reconfigurate a Bucket Policy. Replication and Erasure Coding are supported.</li>
-            <li> The on-premise Back Store is supported by the Ceph Cluster running on three X12 Ultra servers with up to 1.1PB of raw storage capacity per 3-node cluster.</li>
+            <li> The on-premise Back Store is supported by the Ceph Cluster running on the local storage volumes on the X12 BigTwin system.</li>
         </ul>
         <center><img  alt="NooBaa-MCG" src="NooBaa_MCG.gif" width="1000">Figure 2: OpenShift NooBaa Management Console</center><br> 
     </ol>
@@ -249,11 +249,11 @@
       </center>
       <div class="news">
         <ol type="1">
-      <li>You should already have an established VPN connection to access the OpenShift Console</li>
-      <li>To login into the OpenShift Console, please click <a href="https://console-openshift-console.apps.compact2.openshift.smc/" target="_blank">OpenShift Console</a></li>
+      <li>This site can only be reached through a Supermicro VPN connection</li>
+      <li>Admins may log into the X12 BigTwin Compact Cluster through the <a href="https://console-openshift-console.apps.compact2.openshift.smc/" target="_blank">OpenShift Console</a></li>
       <!--li>To login into the SuperCloud Composer Dashboard, please click <a href="https://scc.compact.openshift.smc:8443/" target="_blank">SuperCloud Composer Dashboard</a> </li-->
           <ul class="news" style="color: red;padding: 20px; margin-left: 35px;width: 90%;">
-             <li>All users will only have basic user access.</li>
+             <li>Customers and partners only have basic user access controls.</li>
              <li>For admin controls/requests, please contact <a href='mailto:_cloudnativesys@supermicro.com'>_cloudnativesys@supermicro.com</a>.</li>
           </ul>
         </ol>
@@ -270,9 +270,9 @@
             MinIO can be accessed from your web browser by clicking the new window icon shortcut from within the OpenShift Topology tab. Within MinIO, you can create your own Bucket to add your own video or files to support your applications. MinIO runs seamlessly in the public cloud, private cloud and at the edge. MinIO can support a wide range of use cases from AI/ML, analytics, backup/restore, to modern web and mobile apps. To learn more, please visit <a href='https://min.io/'>min.io</a>.<br>
          </li>
          <ul class="news" style="color: red;padding: 20px; margin-left: 35px;width: 90%;">
-            <li>Your bucket will be deleted once your access has been terminated.</li>
+            <li>Admins can clean out data once user access has been terminated.</li>
             <li>This version of MinIO is not supported by Red Hat, and is strictly for demonstration purposes. MinIO Operator integrates natively on OpenShift with admin-only access.</li>
-            <li>Supermicro will not be responsible for any loss of data. Please backup your files ahead of time.</li>
+            <!--li>Supermicro is not be responsible for any loss of data. Please backup your files ahead of time.</li-->
          </ul>
            <center><img alt="OCP" src="OCP-Topology.png" width="1000">Figure 3: OpenShift Topology</center><br>
            <center><img alt="MinIO" src="MinIO-Browser-m.png" width="1000">Figure 4: MinIO Browser Running in a container on OpenShift</center><br>
