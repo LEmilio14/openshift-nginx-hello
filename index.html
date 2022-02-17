@@ -166,7 +166,7 @@
         if(Hls.isSupported()) {
           var video = document.getElementById('video');
           var hls = new Hls();
-          hls.loadSource('http://nginx-vod-module-container-jumpstart.apps.compact.openshift.smc/hls/smc,360p.mp4,480p.mp4,720p.mp4,1080p.mp4,.en_US.vtt,.urlset/master.m3u8');
+          hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/smc,360p.mp4,480p.mp4,720p.mp4,1080p.mp4,.en_US.vtt,.urlset/master.m3u8');
           hls.attachMedia(video);
           hls.on(Hls.Events.MANIFEST_PARSED,function() {
             video.play();
@@ -176,7 +176,7 @@
        // When the browser has built-in HLS support (check using `canPlayType`), we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video element throught the `src` property.
        // This is using the built-in support of the plain video element, without using hls.js.
         else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-          video.src = 'http://nginx-vod-module-container-jumpstart.apps.compact.openshift.smc/hls/smc,360p.mp4,480p.mp4,720p.mp4,1080p.mp4,.en_US.vtt,.urlset/master.m3u8';
+          video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/smc,360p.mp4,480p.mp4,720p.mp4,1080p.mp4,.en_US.vtt,.urlset/master.m3u8';
           video.addEventListener('canplay',function() {
             video.play();
           });
@@ -225,7 +225,7 @@
         if(Hls.isSupported()) {
           var video = document.getElementById('cluster');
           var hls = new Hls();
-          hls.loadSource('http://nginx-vod-module-container-jumpstart.apps.compact.openshift.smc/hls/cluster.mp4,.urlset/master.m3u8');
+          hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/cluster.mp4,.urlset/master.m3u8');
           hls.attachMedia(video);
           hls.on(Hls.Events.MANIFEST_PARSED,function() {
             video.play();
@@ -235,7 +235,7 @@
        // When the browser has built-in HLS support (check using `canPlayType`), we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video element throught the `src` property.
        // This is using the built-in support of the plain video element, without using hls.js.
         else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-          video.src = 'http://nginx-vod-module-container-jumpstart.apps.compact.openshift.smc/hls/cluster.mp4,.urlset/master.m3u8';
+          video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/cluster.mp4,.urlset/master.m3u8';
           video.addEventListener('canplay',function() {
             video.play();
           });
@@ -248,9 +248,9 @@
       </center>
       <div class="news">
         <ol type="1">
-      <li>You should already have an established VPN connection to access the OpenShift Console or SuperCloud Composer Dashboard</li>
-      <li>To login into the OpenShift Console, please click <a href="https://console-openshift-console.apps.compact.openshift.smc/" target="_blank">OpenShift Console</a></li>
-      <li>To login into the SuperCloud Composer Dashboard, please click <a href="https://scc.compact.openshift.smc:8443/" target="_blank">SuperCloud Composer Dashboard</a> </li>
+      <li>You should already have an established VPN connection to access the OpenShift Console</li>
+      <li>To login into the OpenShift Console, please click <a href="https://console-openshift-console.apps.compact2.openshift.smc/" target="_blank">OpenShift Console</a></li>
+      <!--li>To login into the SuperCloud Composer Dashboard, please click <a href="https://scc.compact.openshift.smc:8443/" target="_blank">SuperCloud Composer Dashboard</a> </li-->
           <ul class="news" style="color: red;padding: 20px; margin-left: 35px;width: 90%;">
              <li>All users will only have basic user access.</li>
              <li>For admin controls/requests, please contact <a href='mailto:_cloudnativesys@supermicro.com'>_cloudnativesys@supermicro.com</a>.</li>
@@ -289,14 +289,14 @@
             if(Hls.isSupported()) {
               var video = document.getElementById('vodhowto');
               var hls = new Hls();
-              hls.loadSource('http://nginx-vod-module-container-jumpstart.apps.compact.openshift.smc/hls/vodhowto.mp4,.urlset/master.m3u8');
+              hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/vodhowto.mp4,.urlset/master.m3u8');
               hls.attachMedia(video);
               hls.on(Hls.Events.MANIFEST_PARSED,function() {
                 video.play();
               });
             }
             else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-              video.src = 'http://nginx-vod-module-container-jumpstart.apps.compact.openshift.smc/hls/vodhowto.mp4,.urlset/master.m3u8';
+              video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/vodhowto.mp4,.urlset/master.m3u8';
               video.addEventListener('canplay',function() {
                 video.play();
               });
@@ -309,7 +309,7 @@
          <li> To review the network topology, please click the Topology icon on the navigation menu, located on the left-hand side. </li>
            <center><img  alt="SCC" src="SCC-3.png" width="900">Figure 7: SuperCloud Composer Network Topology</center><br> 
     </div>
-    <br><br>    
+    <br><br>   
       <center> 
     <br><br>
       <h2 id="sponsors">Sponsors</h2>
@@ -321,7 +321,7 @@
       <br><br><br>
       <div id="footer">
         <div id="center" align="center">
-            &copy; SuperMicro Computer, Inc. 2021
+            &copy; SuperMicro Computer, Inc. 2022
         </div>
       </div>
 </body>
