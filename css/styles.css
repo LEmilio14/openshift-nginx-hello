@@ -1,15 +1,15 @@
 body {
-        margin: 100px 0;
+        padding: 55px 0 0 0;
         font: 20px 'RobotoRegular', Arial, sans-serif;
         font-weight: 100;
         height: 100%;
         color: #0f1419;
-        background-color: #7F8487;
+        background-color: #CDD0CB;
 }
 div.news {
   width: 90%;
     display: table;
-    background: #e8eaec;
+    background: #E8EAE6;
     padding: 20px 20px 20px 20px;
     border: 0px black;
     border-radius: 10px;
@@ -53,9 +53,12 @@ div.smaller p span {
     color: #3D5266;
 }
 
-h1,
+h1{
+  font-weight: 100;
+}
 h2 {
     font-weight: 100;
+    padding: 20px;
 }
 
 div.check {

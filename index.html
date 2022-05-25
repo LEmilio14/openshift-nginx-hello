@@ -10,7 +10,24 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <!-- Bootstrap Script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+  <!-- Owl Carousel -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" />
+
+  <!-- Popup Video -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="popup-video.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
+
+
   <link rel="stylesheet" href="css/styles.css">
+
   <script>
     var ref;
 
@@ -43,17 +60,17 @@
   <!--nav_bar /-->
   <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
     <a class="navbar-brand ms-3" href="https://www.supermicro.com/en/products/nvidia-omniverse?gclid=Cj0KCQjw1ZeUBhDyARIsAOzAqQJEe_6S67oNpPcSJ6aRjG_v6WhP-H4e3ECTzIZxqvdKEPDKJ-aUTAQaAgHbEALw_wcB">
-      <img class="logo me" style="width: 100%; max-width: 100px;" alt="SMC Logo"
-        src="data:image/png;base64,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" />
+      <img class="logo me" style="width: 100%; max-width: 100px;" alt="SMC Logo" src="images/Super_Micro_Computer_logo.svg.png" />
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto me-5">
-        <li class="nav-item"><a class="nav-link" href="#news">Introduction</a></li>
-        <li class="nav-item"><a class="nav-link" href="#jumpstart">How To Access</a></li>
-        <li class="nav-item"><a class="nav-link" href="#usecases">Use Cases</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="intro.html">Introduction</a></li>
+        <!-- <li class="nav-item"><a class="nav-link" href="howToAccess.html">How To Access</a></li> -->
+        <li class="nav-item"><a class="nav-link" href="useCases.html">Use Cases</a></li>
         <li class="nav-item"><a class="nav-link" href="#sponsors">Sponsors</a></li>
       </ul>
       <form class="d-flex me-5" role="search">
@@ -64,12 +81,28 @@
   </nav>
   <script src="hls.js"></script>
 
+  <!-- <center>
+    <h1 id=home>Supermicro MWC'22 Video-on-Demand</h1>
+    <h3> Welcome to the Supermicro Exhibit, located in Hall 5, Booth 5D66</h3>
+    <!-- <h4 style='color: red; font-weight: normal;'> The video below is streaming from our OpenShift 3-Node Compact Cluster, powered by X12 BigTwin</h4> -->
+  <!--center>  <h2> Hello World!</h2> </center //-->
+  <!-- <video height="600" id="video" controls autoplay loop muted class="videoCentered"></video> -->
+  <!-- <br>
+    <canvas id="bufferedCanvas" height="15" class="videoCentered" onclick="onClickBufferedRange(event);"></canvas>
+    <br>
+  </center> -->
+
+  <br>
+
   <!-- Carousel of videos -->
   <section class="carousel">
-    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" touch=true>
       <div class="carousel-inner">
         <div class="carousel-item active">
           <video height="600" width=100% id="video" controls autoplay loop muted class="videoCentered"></video>
+          <br>
+          <canvas id="bufferedCanvas" height="15" class="videoCentered" onclick="onClickBufferedRange(event);"></canvas>
+          <br>
           <div class="carousel-caption d-none d-md-block">
             <h4>Streaming from our OpenShift 3-Node Compact Cluster</h4>
             <h4>Powered by X12 BigTwin</h4>
@@ -77,9 +110,21 @@
         </div>
         <div class="carousel-item">
           <video height="600" width=100% id="cluster" controls autoplay loop muted class="videoCentered"></video>
+          <br>
+          <canvas id="bufferedCanvas" height="15" class="videoCentered" onclick="onClickBufferedRange(event);"></canvas>
+          <br>
+          <div class="carousel-caption d-none d-md-block">
+            <h4>Red Hat Compact Cluster on X12 BigTwin & Ultra</h4>
+          </div>
         </div>
         <div class="carousel-item">
           <video height="600" width=100% id="vodhowto" controls autoplay loop muted class="videoCentered"></video>
+          <br>
+          <canvas id="bufferedCanvas" height="15" class="videoCentered" onclick="onClickBufferedRange(event);"></canvas>
+          <br>
+          <div class="carousel-caption d-none d-md-block">
+            <h4>This VOD container can be used by other cloud-native applications to support desktop & mobile applications.</h4>
+          </div>
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -92,16 +137,8 @@
       </button>
     </div>
   </section>
-  <center>
-    <h2 id=home>Supermicro MWC'22 Video-on-Demand</h2>
-    <h3> Welcome to the Supermicro Exhibit, located in Hall 5, Booth 5D66</h3>
-    <h4 style='color: red; font-weight: normal;'> The video below is streaming from our OpenShift 3-Node Compact Cluster, powered by X12 BigTwin</h4>
-    <!--center>  <h2> Hello World!</h2> </center //-->
-    <video height="600" id="video" controls autoplay loop muted class="videoCentered"></video>
-    <br>
-    <canvas id="bufferedCanvas" height="15" class="videoCentered" onclick="onClickBufferedRange(event);"></canvas>
-    <br>
-  </center>
+
+  <!-- Green Video Script -->
   <script>
     if (Hls.isSupported()) {
       var video = document.getElementById('video');
@@ -123,53 +160,7 @@
     }
   </script>
 
-  <center>
-    <h2 id="news">Introduction to OpenShift Container Platform</h2>
-  </center>
-  <div class="news">Containers and Kubernetes can help ease the burden of configuring, deploying, managing, and monitoring even the largest-scale applications. Together, they provide organizations with the ability to develop applications once and
-    deploy them anywhere - regardless of the location. Developers can release code without worrying about the underlying hardware infrastructure, while the operator framework provides automation solutions needed to simplify day 1 and day 2
-    operations. Thus, IT Ops & DevOps teams are able to gain significant advantages and efficiencies through a consistent and scalable platform that runs across on-premises; public, hybrid, or multi clouds; as well as the edge.
-    <br><br>
-    This website is powered by OpenShift, which is an Enterprise-Ready Kubernetes solution that is running on just three X12 BigTwin nodes. These nodes consist of 3rd Gen Intel&reg; Xeon&reg; Scalable Processors, Intel&reg; Optane&trade; Persistent
-    Memory 200, Intel&reg; Optane&trade; DC SSD Series, and Intel Ethernet 800 Series. The 4th node of this platform supports 2 other key solutions: Bastion and SuperCloud Composer. This compact cluster makes it easy to deploy and manage a hybrid
-    cloud within only 2U of rack space.
-    <br><br>
-    The Bastion host serves as the main deployment and management server for the OpenShift Cluster, while SuperCloud Composer runs in a VM as a supplemental composable cloud management platform that provides a unified dashboard to administer
-    software-defined data centers. Adding additional storage (such as Ceph storage), or even GPU nodes, can be streamlined through SuperCloud Composer and can provide a deeper integration for life cycle management and system analytics. This can
-    include server health, network bandwidth, power metering, as well as external sensors that may be critical to running Data Center operations smoothly.
-    <br><br>
-    To learn more about the solution, please refer to our product landing pages and partner's website: <a href='https://www.supermicro.com/en/products/bigtwin/' target="_blank">X12 BigTwin</a>, <a href='https://www.supermicro.com/en/products/ultra/'
-      target="_blank">X12 Ultra</a>, <a href='https://www.supermicro.com/en/solutions/management-software/supercloud-composer' target="_blank">SuperCloud Composer</a>, <a href='http://solution.supermicro.com' target="_blank">Supermicro Solution
-      Integration Center</a>, and <a href='https://access.redhat.com/products/openshift/' target="_blank">Red Hat OpenShift</a>.
-    <br><br>
-  </div>
-  <center>
-    <h2 id="news">Multi-Cloud Object Gateway</h2>
-  </center>
-  <div class="news">
-    <ol type="1">
-      <li> Admins can create and manage storage (Back Stores), with the Multi-Cloud Object Gateway</li>
-      <ul class="news" style="padding: 20px; margin-left: 35px;width: 90%;">
-        <li> We encourage our customers and partners to test drive our solution on display by creating their own test website, starting with their own storage buckets. This does not include the ability to create Back Stores from the public cloud or
-          pre-existing on-premise storage.</li>
-      </ul>
-      <center><img alt="MCG" src="MCG-SMC-RH-OpenShift-3-node-compact-cluster.gif" width="1000">Figure 1: OpenShift Multi-Cloud Object Gateway</center><br>
-      <li> OpenShift Data Foundation (aka OpenShift Container Storage) can be configured to replicate objects by default</li>
-      <ul class="news" style="padding: 20px; margin-left: 35px;width: 90%;">
-        <li> Only admins can reconfigurate a Bucket Policy. Replication and Erasure Coding are supported.</li>
-        <li> The on-premise Back Store is supported by the Ceph Cluster running on the local storage volumes on the X12 BigTwin system.</li>
-      </ul>
-      <center><img alt="NooBaa-MCG" src="NooBaa_MCG.gif" width="1000">Figure 2: OpenShift NooBaa Management Console</center><br>
-    </ol>
-  </div>
-  <center>
-    <h2>Red Hat Compact Cluster on X12 BigTwin & Ultra</h2>
-    <video height="600" id="cluster" controls autoplay loop muted class="videoCentered"></video>
-    <br>
-    <canvas id="bufferedCanvas" height="15" class="videoCentered" onclick="onClickBufferedRange(event);"></canvas>
-    <br>
-  </center>
-
+  <!-- Cluster Video Script -->
   <script>
     if (Hls.isSupported()) {
       var video = document.getElementById('cluster');
@@ -191,78 +182,210 @@
     }
   </script>
 
-  <br><br>
-  <center>
-    <h2 id="jumpstart">How to Access the Cluster</h2>
-  </center>
-  <div class="news">
-    <ol type="1">
-      <li>This site can only be reached through a Supermicro VPN connection</li>
-      <li>Admins may log into the X12 BigTwin Compact Cluster through the <a href="https://console-openshift-console.apps.compact2.openshift.smc/" target="_blank">OpenShift Console</a></li>
-      <!--li>To login into the SuperCloud Composer Dashboard, please click <a href="https://scc.compact.openshift.smc:8443/" target="_blank">SuperCloud Composer Dashboard</a> </li-->
-      <ul class="news" style="color: red;padding: 20px; margin-left: 35px;width: 90%;">
-        <li>Customers and partners only have basic user access controls.</li>
-        <li>For admin controls/requests, please contact <a href='mailto:_cloudnativesys@supermicro.com'>_cloudnativesys@supermicro.com</a>.</li>
-      </ul>
-    </ol>
-  </div>
+  <!-- VOD Container Video Script -->
+  <script>
+    if (Hls.isSupported()) {
+      var video = document.getElementById('vodhowto');
+      var hls = new Hls();
+      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/vodhowto.mp4,.urlset/master.m3u8');
+      hls.attachMedia(video);
+      hls.on(Hls.Events.MANIFEST_PARSED, function() {
+        video.play();
+      });
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/vodhowto.mp4,.urlset/master.m3u8';
+      video.addEventListener('canplay', function() {
+        video.play();
+      });
+    }
+  </script>
+
+  <!-- Carousel of product Videos -->
+  <section>
+
+    <div class="container-fluid my-5">
+      <h1 class="display-1 mb-5"><span class="text-danger">Twin Systems</span></h1>
+      <div class="row">
+        <div class="col-12 m-auto">
+          <div class="owl-carousel owl-theme">
+            <div class="item mb-4">
+              <div class="card border-0 shadow">
+                <img src="images/image1.PNG" alt="Omniverse" class="card-img-top">
+                <div class="card-body">
+                  <div class="card-title text-center">
+                    <h4>Omniverse Enterprise</h4>
+                  </div>
+                  <br>
+                  <div class="card-title text-center popup" onclick="myFunction()">
+                    <a href="#videoStory" class="btn btn-primary" id="videoLink">Watch Video <i class="fa fa-play-circle" aria-hidden="true">&nbsp;</i></a>
+                    <div id="videoStory" class="mfp-hide" style="max-width: 100%; text-align: center; margin: 0 auto;">
+                      <iframe width=70% height=500p
+                        src="https://www.youtube.com/embed/F_JOrSolats"
+                        frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <!-- <a href="#" class="btn btn-primary">Watch</a> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="card border-0 shadow">
+                <img src="images/image2.PNG" alt="" class="card-img-top">
+                <div class="card-body">
+                  <div class="card-title text-center">
+                    <h4>Supermicro CDN</h4>
+                  </div>
+                  <br>
+                  <div class="card-title text-center">
+                    <a href="#videoStory" class="btn btn-primary" id="videoLink">Watch Video <i class="fa fa-play-circle" aria-hidden="true">&nbsp;</i></a>
+                    <div id="videoStory" class="mfp-hide" style="max-width: 75%; margin: 0 auto;">
+                      <iframe width="853" height="480" src="https://www.youtube.com/embed/oXoe3GWygq0?rel=0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <!-- <a href="#" class="btn btn-primary">Watch</a> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card border-0 shadow">
+                <img src="images/image3.PNG" alt="" class="card-img-top">
+                <div class="card-body">
+                  <div class="card-title text-center">
+                    <h4>Artic Sound-M</h4>
+                  </div>
+                  <div class="card-title text-center">
+                    <a href="#" class="btn btn-primary">Watch</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card border-0 shadow">
+                <img src="5.jpg" alt="" class="card-img-top">
+                <div class="card-body">
+                  <div class="card-title text-center">
+                    <h4>Text Here</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card border-0 shadow">
+                <img src="6.jpg" alt="" class="card-img-top">
+                <div class="card-body">
+                  <div class="card-title text-center">
+                    <h4>Text Here</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card border-0 shadow">
+                <img src="7.jpg" alt="" class="card-img-top">
+                <div class="card-body">
+                  <div class="card-title text-center">
+                    <h4>Text Here</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="card" style="width: 18rem;">
+            <img src="images/image1.PNG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Omniverse Enterprise</h5>
+              <p class="card-text">Harness the power of AI with Supermicro and Nvidia Omniverse Enterprise.</p>
+              <a href="#" class="btn btn-primary ms-5">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="..." class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div> -->
+  </section>
+
+  <script type="text/javascript">
+    $('#videoLink')
+      .magnificPopup({
+        type: 'inline',
+        midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+      })
+  </script>
+
+  <script type="text/javascript">
+    $('#videoLink2')
+      .magnificPopup({
+        type: 'inline',
+        midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+      })
+  </script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 15,
+      nav: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        1000: {
+          items: 3
+        }
+      }
+    })
+  </script>
+
+
 
   <br>
-  <center>
-    <h2 id="usecases">Use Cases</h2>
-  </center>
-  <div class="news">
-    <ol type="1">
-      <li> Developers may navigate to the Topology tab to review the applications running within each project. In the example below, we are showing how this website is built with OpenShift along with open source tools, including: MinIO, Nginx, and a
-        simple python script.<br>
-        <br>
-        MinIO can be accessed from your web browser by clicking the new window icon shortcut from within the OpenShift Topology tab. Within MinIO, you can create your own Bucket to add your own video or files to support your applications. MinIO runs
-        seamlessly in the public cloud, private cloud and at the edge. MinIO can support a wide range of use cases from AI/ML, analytics, backup/restore, to modern web and mobile apps. To learn more, please visit <a
-          href='https://min.io/'>min.io</a>.<br>
-      </li>
-      <ul class="news" style="color: red;padding: 20px; margin-left: 35px;width: 90%;">
-        <li>Admins can clean out data once user access has been terminated.</li>
-        <li>This version of MinIO is not supported by Red Hat, and is strictly for demonstration purposes. MinIO Operator integrates natively on OpenShift with admin-only access.</li>
-        <!--li>Supermicro is not be responsible for any loss of data. Please backup your files ahead of time.</li-->
-      </ul>
-      <center><img alt="OCP" src="OCP-Topology.png" width="1000">Figure 3: OpenShift Topology</center><br>
-      <center><img alt="MinIO" src="MinIO-Browser-m.png" width="1000">Figure 4: MinIO Browser Running in a container on OpenShift</center><br>
-      <li>Here is how MinIO is being used to support Video-On-Demand on this website.
-        <ul class="news" style="padding: 20px; margin-left: 35px;width: 90%;">
-          <li>This VOD container can be used by other cloud-native applications to support desktop & mobile applications.</li>
-        </ul>
-        <center>
-          <video height="600" id="vodhowto" controls autoplay loop muted class="videoCentered"></video>
-          <br>
-          <canvas id="bufferedCanvas" height="15" class="videoCentered" onclick="onClickBufferedRange(event);"></canvas>
-          <br>
-        </center>
-        <script>
-          if (Hls.isSupported()) {
-            var video = document.getElementById('vodhowto');
-            var hls = new Hls();
-            hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/vodhowto.mp4,.urlset/master.m3u8');
-            hls.attachMedia(video);
-            hls.on(Hls.Events.MANIFEST_PARSED, function() {
-              video.play();
-            });
-          } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-            video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/vodhowto.mp4,.urlset/master.m3u8';
-            video.addEventListener('canplay', function() {
-              video.play();
-            });
-          }
-        </script>
-      <li> To review the cluster hardware resources, SuperCloud Composer can give you a high level overview on the Dashboard tab. </li>
-      <center><img alt="SCC" src="SCC-1.png" width="900">Figure 5: SuperCloud Composer Dashboard</center><br>
-      <li> To review the compute list, please click the Compute icon on the navigation menu, located on the left-hand side.</li>
-      <center><img alt="SCC" src="SCC-2.png" width="900">Figure 6: SuperCloud Composer Compute list</center><br>
-      <li> To review the network topology, please click the Topology icon on the navigation menu, located on the left-hand side. </li>
-      <center><img alt="SCC" src="SCC-3.png" width="900">Figure 7: SuperCloud Composer Network Topology</center><br>
-  </div>
   <br><br>
   <center>
-    <br><br>
     <h2 id="sponsors">Sponsors</h2>
     <div class="news">
       <img style="width: 100%; max-width: 1000px;" alt="Logos" class="center" src="logos-red-hat-intel-v2.png" />
