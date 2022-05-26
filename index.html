@@ -93,36 +93,36 @@
 
   <br>
 
-  <!-- Carousel of videos -->
+  <!-- Carousel of Intro videos -->
   <section class="carousel">
-    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="false" data-bs-ride="carousel" touch=true>
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="false" touch=true>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <video height="600" width=100% id="video" autoplay loop muted class="videoCentered"></video>
+          <video height="600" width=100% id="video" controls autoplay loop muted class="videoCentered"></video>
           <br>
           <canvas id="bufferedCanvas" height="15" class="videoCentered" onclick="onClickBufferedRange(event);"></canvas>
           <br>
           <div class="carousel-caption d-none d-md-block">
-            <h4>Streaming from our OpenShift 3-Node Compact Cluster</h4>
-            <h4>Powered by X12 BigTwin</h4>
+            <h4 style='color: red; font-weight: normal;'>Streaming from our OpenShift 3-Node Compact Cluster</h4>
+            <h4 style='color: red; font-weight: normal;'>Powered by X12 BigTwin</h4>
           </div>
         </div>
         <div class="carousel-item">
-          <video height="600" width=100% id="cluster" autoplay loop muted class="videoCentered"></video>
+          <video height="600" width=100% id="cluster" controls autoplay loop muted class="videoCentered"></video>
           <br>
           <canvas id="bufferedCanvas" height="15" class="videoCentered" onclick="onClickBufferedRange(event);"></canvas>
           <br>
           <div class="carousel-caption d-none d-md-block">
-            <h4>Red Hat Compact Cluster on X12 BigTwin & Ultra</h4>
+            <h4 style='color: red; font-weight: normal;'>Red Hat Compact Cluster on X12 BigTwin & Ultra</h4>
           </div>
         </div>
         <div class="carousel-item">
-          <video height="600" width=100% id="vodhowto" autoplay loop muted class="videoCentered"></video>
+          <video height="600" width=100% id="vodhowto" controls autoplay loop muted class="videoCentered"></video>
           <br>
           <canvas id="bufferedCanvas" height="15" class="videoCentered" onclick="onClickBufferedRange(event);"></canvas>
           <br>
           <div class="carousel-caption d-none d-md-block">
-            <h4>This VOD container can be used by other cloud-native applications to support desktop & mobile applications.</h4>
+            <h4 style='color: red; font-weight: normal;'>This VOD container can be used by other cloud-native applications to support desktop & mobile applications.</h4>
           </div>
         </div>
       </div>
@@ -203,23 +203,27 @@
   <section>
 
     <div class="container-fluid my-5">
-      <h1 class="display-1 mb-5"><span class="text-danger">Twin Systems</span></h1>
+      <h1 class="display-1 mb-5"><span class="text-danger">Twin Family</span></h1>
       <div class="row">
         <div class="col-12 m-auto">
           <div class="owl-carousel owl-theme">
             <div class="item mb-4">
               <div class="card border-0 shadow">
-                <img src="image1.PNG" alt="Omniverse" class="card-img-top">
+                <img src="image2.PNG" alt="Omniverse" class="card-img-top">
                 <div class="card-body">
                   <div class="card-title text-center">
-                    <h4>Omniverse Enterprise</h4>
+                    <h4>Supermicro CDN</h4>
                   </div>
                   <br>
-                  <div class="card-title text-center popup" onclick="myFunction()">
-                    <a href="#videoStory" class="btn btn-primary" id="omniverseVideo">Watch Video <i class="fa fa-play-circle" aria-hidden="true">&nbsp;</i></a>
+                  <div class="card-title text-center">
+                    <a href="#videoStory" class="btn btn-primary" id="cdnVideo">Watch Video <i class="fa fa-play-circle" aria-hidden="true">&nbsp;</i></a>
+                    <div id="videoStory" class="mfp-hide" style="max-width: 100%; text-align: center; margin: 0 auto;">
+                      <iframe width=70% height="500" src="https://www.youtube.com/embed/iDxEm_ih_M0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <!-- <a href="#videoStory" class="btn btn-primary" id="omniverseVideo">Watch Video <i class="fa fa-play-circle" aria-hidden="true">&nbsp;</i></a>
                     <div id="videoStory" class="mfp-hide" style="max-width: 100%; text-align: center; margin: 0 auto;">
                       <iframe width=70% height="500" src="https://www.youtube.com/embed/F_JOrSolats" frameborder="0" allowfullscreen></iframe>
-                    </div>
+                    </div> -->
                     <!-- <a href="#" class="btn btn-primary">Watch</a> -->
                   </div>
                 </div>
@@ -228,16 +232,16 @@
 
             <div class="item">
               <div class="card border-0 shadow">
-                <img src="image2.PNG" alt="" class="card-img-top">
+                <img src="bigTwin_image.PNG" alt="" class="card-img-top">
                 <div class="card-body">
                   <div class="card-title text-center">
-                    <h4>Supermicro CDN</h4>
+                    <h4>Supermicro BigTwin</h4>
                   </div>
                   <br>
                   <div class="card-title text-center">
-                    <a href="#videoStory" class="btn btn-primary" id="videoLink">Watch Video <i class="fa fa-play-circle" aria-hidden="true">&nbsp;</i></a>
-                    <div id="videoStory" class="mfp-hide" style="max-width: 75%; margin: 0 auto;">
-                      <iframe width=70% height="60%" src="https://www.youtube.com/embed/iDxEm_ih_M0" frameborder="0" allowfullscreen></iframe>
+                    <a href="#videoStory" class="btn btn-primary" id="bigTwinVideo">Watch Video <i class="fa fa-play-circle" aria-hidden="true">&nbsp;</i></a>
+                    <div id="videoStory" class="mfp-hide" style="max-width: 100%; text-align: center; margin: 0 auto;">
+                      <iframe width=70% height="500" src="https://www.youtube.com/embed/BobQ8KkfRzE" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <!-- <a href="#" class="btn btn-primary">Watch</a> -->
                   </div>
@@ -342,21 +346,20 @@
   </section>
 
   <script type="text/javascript">
-    // var video = document.getElementById('vodhowto');
-    $('#videoLink')
-      .magnificPopup({
+    var video = document.getElementById('cdnVideo');
+    $(video).magnificPopup({
         type: 'inline',
         midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
       })
   </script>
 
-  <!-- <script type="text/javascript">
-    $('#videoLink2')
-      .magnificPopup({
+  <script type="text/javascript">
+    var video1 = document.getElementById('bigTwinVideo');
+    $(video1).magnificPopup({
         type: 'inline',
         midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
       })
-  </script> -->
+  </script>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
