@@ -151,6 +151,7 @@ COPY SCC-3.png /usr/share/nginx/html/
 COPY image1.PNG /usr/share/nginx/html/
 COPY image2.PNG /usr/share/nginx/html/
 COPY image3.PNG /usr/share/nginx/html/
+COPY bigTwin_image.PNG /usr/share/nginx/html/
 COPY Super_Micro_Computer_Logo.svg.png /usr/share/nginx/html/
 COPY logos-red-hat-intel-v2.png /usr/share/nginx/html/
 COPY NooBaa_MCG.gif /usr/share/nginx/html/
