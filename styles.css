@@ -133,3 +133,8 @@ li.nav-item a:hover:not(.active) {
   align-items: center;
   justify-content: center;
 }
+
+.modal-content {
+  background: transparent !important;
+  border: none !important;
+}
