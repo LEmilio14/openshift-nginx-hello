@@ -117,7 +117,13 @@ li.nav-item a:hover:not(.active) {
   /* background-color: #04AA6D; */
 }
 
-
+.center_container{
+  width: 100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .family_title {
   font-weight: bold;
