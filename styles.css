@@ -117,12 +117,9 @@ li.nav-item a:hover:not(.active) {
   /* background-color: #04AA6D; */
 }
 
-.center_container{
+
+.card {
   width: 100%;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .family_title {
@@ -130,4 +127,9 @@ li.nav-item a:hover:not(.active) {
   font: 50px;
   padding-left: 125px;
   color: #143F6B;
+}
+
+.carousel-item {
+  align-items: center;
+  justify-content: center;
 }
