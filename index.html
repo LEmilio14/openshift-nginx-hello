@@ -15,17 +15,11 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 
   <!-- Owl Carousel -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
     crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
-    crossorigin="anonymous" />
-
-  <!-- Popup Video -->
-  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script> -->
+    crossorigin="anonymous" /> -->
 
 
   <link rel="stylesheet" href="styles.css" type="text/css">
@@ -82,17 +76,6 @@
     </div>
   </nav>
   <script src="hls.js"></script>
-
-  <!-- <center>
-    <h1 id=home>Supermicro MWC'22 Video-on-Demand</h1>
-    <h3> Welcome to the Supermicro Exhibit, located in Hall 5, Booth 5D66</h3>
-    <!-- <h4 style='color: red; font-weight: normal;'> The video below is streaming from our OpenShift 3-Node Compact Cluster, powered by X12 BigTwin</h4> -->
-  <!--center>  <h2> Hello World!</h2> </center //-->
-  <!-- <video height="600" id="video" controls autoplay loop muted class="videoCentered"></video> -->
-  <!-- <br>
-    <canvas id="bufferedCanvas" height="15" class="videoCentered" onclick="onClickBufferedRange(event);"></canvas>
-    <br>
-  </center> -->
 
   <br>
 
@@ -231,11 +214,13 @@
                       <h4 style="text-align: center;" class="card-title">Supermicro CDN</h4>
                       <br>
                       <div class="text-center">
-                        <a href="#" class="btn btn-primary center">Watch Video</a>
+                        <a href="#" class="btn btn-primary center" data-bs-toggle="modal" data-bs-target="#cdnVideo">Watch Video</a>
                       </div>
                     </div>
                   </div>
                 </div>
+
+
                 <!-- Supermicro BigTwin picture and button -->
                 <div class="col-lg-4 col-sm-4">
                   <div class="card">
@@ -244,11 +229,13 @@
                       <h4 style="text-align: center;" class="card-title">Supermicro BigTwin</h4>
                       <br>
                       <div class="text-center">
-                        <a href="#" class="btn btn-primary center">Watch Video</a>
+                        <a href="#" class="btn btn-primary center" data-bs-toggle="modal" data-bs-target="#BigTwin">Watch Video</a>
                       </div>
                     </div>
                   </div>
                 </div>
+
+
                 <!-- BigTwin tour picture and button -->
                 <div class="col-lg-4 col-sm-4">
                   <div class="card" >
@@ -257,7 +244,7 @@
                       <h4 style="text-align: center;" class="card-title">BigTwin Hardware Tour</h4>
                       <br>
                       <div class="text-center">
-                        <a href="#" class="btn btn-primary center">Watch Video</a>
+                        <a href="#" class="btn btn-primary center" data-bs-toggle="modal" data-bs-target="#Hardware">Watch Video</a>
                       </div>
                     </div>
                   </div>
@@ -265,8 +252,6 @@
 
               </div>
             </div>
-
-            <!-- <img src="..." class="d-block w-100" alt="..."> -->
           </div>
 
           <!-- Second Page in the carousel -->
@@ -274,6 +259,7 @@
 
             <div class="container">
               <div class="row">
+
                 <!-- Arctic Sound picture and button -->
                 <div class="col-lg-4 col-sm-4">
                   <div class="card">
@@ -282,11 +268,13 @@
                       <h4 style="text-align: center;" class="card-title">Arctic Sound-M</h4>
                       <br>
                       <div class="text-center">
-                        <a href="#" style="text-align: center;" class="btn btn-primary center">Watch Video</a>
+                        <a href="#" class="btn btn-primary center" data-bs-toggle="modal" data-bs-target="#Arctic">Watch Video</a>
                       </div>
                     </div>
                   </div>
                 </div>
+
+
                 <!-- BigTwin Server picture and button -->
                 <div class="col-lg-4 col-sm-4">
                   <div class="card">
@@ -295,11 +283,13 @@
                       <h4 style="text-align: center;" class="card-title">X12 BigTwin Server</h4>
                       <br>
                       <div class="text-center">
-                        <a href="#" style="text-align: center;" class="btn btn-primary center">Watch Video</a>
+                        <a href="#" class="btn btn-primary center" data-bs-toggle="modal" data-bs-target="#BigTwin_Server">Watch Video</a>
                       </div>
                     </div>
                   </div>
                 </div>
+
+
                 <!-- BigTwin EDSFF picture and button -->
                 <div class="col-lg-4 col-sm-4">
                   <div class="card">
@@ -308,7 +298,7 @@
                       <h4 style="text-align: center;" class="card-title">BigTwin EDSFF</h4>
                       <br>
                       <div class="text-center">
-                        <a href="#" style="text-align: center;" class="btn btn-primary center">Watch Video</a>
+                        <a href="#" class="btn btn-primary center" data-bs-toggle="modal" data-bs-target="#BigTwin_edsff">Watch Video</a>
                       </div>
                     </div>
                   </div>
@@ -335,152 +325,73 @@
 
   </section>
 
-
-  <!-- <div class="container-fluid my-5">
-      <h1 class="display-1 mb-5"><span class="text-danger">Twin Family</span></h1>
-      <div class="row">
-        <div class="col-12 m-auto">
-          <div class="owl-carousel owl-theme">
-            <div class="item mb-4">
-              <div class="card border-0 shadow">
-                <img src="image2.PNG" alt="Omniverse" class="card-img-top">
-                <div class="card-body">
-                  <div class="card-title text-center">
-                    <h4>Supermicro CDN</h4>
-                  </div>
-                  <br>
-                  <div class="card-title text-center">
-                    <a href="#videoStory" class="btn btn-primary" id="cdnVideo">Watch Video <i class="fa fa-play-circle" aria-hidden="true">&nbsp;</i></a>
-                    <div id="videoStory" class="hide" style="max-width: 100%; text-align: center; margin: 0 auto;">
-                      <iframe width=70% height="500" src="https://www.youtube.com/embed/iDxEm_ih_M0" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="card border-0 shadow">
-                <img src="bigTwin_image.PNG" alt="" class="card-img-top">
-                <div class="card-body">
-                  <div class="card-title text-center">
-                    <h4>Supermicro BigTwin</h4>
-                  </div>
-                  <br>
-                  <div class="column card-title text-center">
-                    <img src="play_button.png" alt="Play" class="play-btn" data-toggle="modal" data-target="#exampleModalCenter">
-
-                    <!-- <a href="#videoStory" class="btn btn-primary popup" id="bigTwinVideo" onclick="myFunction()">
-                      Watch Video <i class="fa fa-play-circle" aria-hidden="true">&nbsp;</i>
-                    </a>
-                    <div id="videoStory" class="mfp-hide popuptext" style="max-width: 100%; text-align: center; margin: 0 auto;">
-                      <iframe width=70% height="500" src="https://www.youtube.com/embed/BobQ8KkfRzE" frameborder="0" allowfullscreen></iframe>
-                    </div> -->
-  <!-- <a href="#" class="btn btn-primary">Watch</a> -->
-  <!-- </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="card border-0 shadow">
-                <img src="image3.PNG" alt="" class="card-img-top img-fliud">
-                <div class="card-body">
-                  <div class="card-title text-center">
-                    <h4>Arctic Sound-M</h4>
-                  </div>
-                  <br>
-                  <div class=" column card-title text-center">
-                    <img src="play_button.png" alt="Play" class="play-btn">
-                    <!-- <a href="#videoStory" class="btn btn-primary" id="videoLink">Watch Video <i class="fa fa-play-circle" aria-hidden="true">&nbsp;</i></a>
-                    <div id="videoStory" class="mfp-hide" style="max-width: 75%; margin: 0 auto;">
-                      <iframe width=70% height="60%" src="https://www.youtube.com/embed/iDxEm_ih_M0" frameborder="0" allowfullscreen></iframe>
-                    </div> -->
-  <!-- </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="card border-0 shadow">
-                <img src="5.jpg" alt="" class="card-img-top">
-                <div class="card-body">
-                  <div class="card-title text-center">
-                    <h4>Text Here</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="card border-0 shadow">
-                <img src="6.jpg" alt="" class="card-img-top">
-                <div class="card-body">
-                  <div class="card-title text-center">
-                    <h4>Text Here</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="card border-0 shadow">
-                <img src="7.jpg" alt="" class="card-img-top">
-                <div class="card-body">
-                  <div class="card-title text-center">
-                    <h4>Text Here</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <div class="modalCenter">
-          <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  ...
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
-            </div>
-          </div>
+  <!-- Modal for CDN Video-->
+  <div class="modal fade" id="cdnVideo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <iframe width=100% height="500px" src="https://www.youtube.com/embed/iDxEm_ih_M0" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
-    </div> -->
+    </div>
+  </div>
+
+  <!-- Modal for BigTwin Video-->
+  <div class="modal fade" id="BigTwin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <iframe width=100% height="500px" src="https://www.youtube.com/embed/BobQ8KkfRzE" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Hardware Tour Video-->
+  <div class="modal fade" id="Hardware" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <iframe width=100% height="500px" src="https://www.youtube.com/embed/pYObkWrbZhA" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Arctic Sound Video-->
+  <div class="modal fade" id="Arctic" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <iframe width=100% height="500px" src="https://www.youtube.com/embed/F_JOrSolats" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for BigTwin Server Video-->
+  <div class="modal fade" id="BigTwin_Server" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <iframe width=100% height="500px" src="https://www.youtube.com/embedlB0UGcWbIO0" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for BigTwin EDSFF Video-->
+  <div class="modal fade" id="BigTwin_edsff" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <iframe width=100% height="500px" src="https://www.youtube.com/embed/dDYTbXzjYc0" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
-  <script type="text/javascript">
-    var video = document.getElementById('cdnVideo');
-    // video.classList.toggle("show");
-
-    $(video).magnificPopup({
-      type: 'inline',
-      midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
-    })
-
-    function myFunction() {
-      var popup = document.getElementById("bigTwinVideo");
-      popup.classList.toggle("show");
-
-      if (popup.paused) {
-        popup.play();
-      } else {
-        popup.pause();
-      }
-
-    }
-    // var video1 = document.getElementById('bigTwinVideo');
-    // $(video1).magnificPopup({
-    //     type: 'inline',
-    //     midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
-    //   })
-  </script>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
