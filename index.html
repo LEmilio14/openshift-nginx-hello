@@ -55,9 +55,9 @@
 <body>
 
   <!--nav_bar /-->
-  <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
     <a class="navbar-brand ms-3" href="https://www.supermicro.com/en/products/nvidia-omniverse?gclid=Cj0KCQjw1ZeUBhDyARIsAOzAqQJEe_6S67oNpPcSJ6aRjG_v6WhP-H4e3ECTzIZxqvdKEPDKJ-aUTAQaAgHbEALw_wcB">
-      <img alt="Company Logo" src="Super_Micro_Computer_Logo.svg.png" class="logo me" style="width: 100%; max-width: 100px;" />
+      <img alt="Company Logo" src="images/Super_Micro_Computer_Logo.svg.png" class="logo me" style="width: 100%; max-width: 100px;" />
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -81,22 +81,21 @@
   <!-- HLS Script for Videos -->
   <script src="hls.js"></script>
 
-  <br>
 
   <!-- Carousel of Intro videos -->
-  <section class="carousel">
+  <section class="intro_carousel">
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="false" touch=true>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <video height="600" width=100% id="video" controls autoplay loop muted class="videoCentered"></video>
+          <video  width=100% id="video" controls autoplay loop muted class="videoCentered"></video>
           <br>
           <canvas id="bufferedCanvas" height="15" class="videoCentered" onclick="onClickBufferedRange(event);"></canvas>
           <br>
-          <div class="carousel-caption d-none d-md-block">
+          <!-- <div class="carousel-caption d-none d-md-block">
             <h4 style='color: red; font-weight: normal;'>Streaming from our OpenShift 3-Node Compact Cluster</h4>
             <h4 style='color: red; font-weight: normal;'>Powered by X12 BigTwin</h4>
-          </div>
-        </div>
+          </div> -->
+        <!-- </div> -->
         <!-- <div class="carousel-item">
           <video height="600" width=100% id="cluster" controls autoplay loop muted class="videoCentered"></video>
           <br>
@@ -124,8 +123,12 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button> -->
-      </div>
+      <!-- </div> -->
   </section>
+  <div class="carousel-caption d-none d-md-block">
+    <h4 style='color: red; font-weight: bold;'>Streaming from our OpenShift 3-Node Compact Cluster</h4>
+    <h4 style='color: red; font-weight: bold;'>Powered by X12 BigTwin</h4>
+  </div>
 
   <!-- Green Video Script -->
   <script>
@@ -213,7 +216,7 @@
                 <!-- Supermicro CDN picture and button -->
                 <div class="col-lg-4 col-sm-4">
                   <div class="card">
-                    <img src="image2.PNG" class="card-img-top" alt="CDN">
+                    <img src="images/image2.PNG" class="card-img-top" alt="CDN">
                     <div class="card-body">
                       <h4 style="text-align: center;" class="card-title">Supermicro CDN</h4>
                       <br>
@@ -228,7 +231,7 @@
                 <!-- Supermicro BigTwin picture and button -->
                 <div class="col-lg-4 col-sm-4">
                   <div class="card">
-                    <img src="bigTwin_image.PNG" class="card-img-top" alt="BigTwin">
+                    <img src="images/bigTwin_image.PNG" class="card-img-top" alt="BigTwin">
                     <div class="card-body">
                       <h4 style="text-align: center;" class="card-title">Supermicro BigTwin</h4>
                       <br>
@@ -243,7 +246,7 @@
                 <!-- BigTwin tour picture and button -->
                 <div class="col-lg-4 col-sm-4">
                   <div class="card" >
-                    <img src="hardware_tour.PNG" class="card-img-top" alt="BigTwin Hardware Tour">
+                    <img src="images/hardware_tour.PNG" class="card-img-top" alt="BigTwin Hardware Tour">
                     <div class="card-body">
                       <h4 style="text-align: center;" class="card-title">BigTwin Hardware Tour</h4>
                       <br>
@@ -267,7 +270,7 @@
                 <!-- Arctic Sound picture and button -->
                 <div class="col-lg-4 col-sm-4">
                   <div class="card">
-                    <img src="image3.PNG" class="card-img-top" alt="Arctic Sound">
+                    <img src="images/image3.PNG" class="card-img-top" alt="Arctic Sound">
                     <div class="card-body">
                       <h4 style="text-align: center;" class="card-title">Arctic Sound-M</h4>
                       <br>
@@ -282,7 +285,7 @@
                 <!-- BigTwin Server picture and button -->
                 <div class="col-lg-4 col-sm-4">
                   <div class="card">
-                    <img src="BigTwin_Server.PNG" class="card-img-top" alt="BigTwin Server">
+                    <img src="images/BigTwin_Server.PNG" class="card-img-top" alt="BigTwin Server">
                     <div class="card-body">
                       <h4 style="text-align: center;" class="card-title">X12 BigTwin Server</h4>
                       <br>
@@ -297,7 +300,7 @@
                 <!-- BigTwin EDSFF picture and button -->
                 <div class="col-lg-4 col-sm-4">
                   <div class="card">
-                    <img src="BigTwin_edsff.PNG" class="card-img-top" alt="BigTwin EDSFF">
+                    <img src="images/BigTwin_edsff.PNG" class="card-img-top" alt="BigTwin EDSFF">
                     <div class="card-body">
                       <h4 style="text-align: center;" class="card-title">BigTwin EDSFF</h4>
                       <br>
@@ -429,7 +432,7 @@
   <center>
     <h2 id="sponsors">Sponsors</h2>
     <div class="news">
-      <img style="width: 100%; max-width: 1000px;" alt="Logos" class="center" src="logos-red-hat-intel-v2.png" />
+      <img style="width: 100%; max-width: 1000px;" alt="Logos" class="center" src="images/logos-red-hat-intel-v2.png" />
     </div>
   </center>
   <br><br><br>
