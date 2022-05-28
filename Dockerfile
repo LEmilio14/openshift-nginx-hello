@@ -143,7 +143,7 @@ COPY intro.html /usr/share/nginx/html/
 COPY useCases.html /usr/share/nginx/html/
 COPY styles.css /usr/share/nginx/html/
 COPY hls.js /usr/share/nginx/html/
-COPY OCP-Topology.png /usr/share/nginx/html/images/
+COPY /usr/share/nginx/html/images/OCP-Topology.png /usr/share/nginx/html/images/
 COPY MinIO-Browser-m.png /usr/share/nginx/html/images/
 COPY SCC-1.png /usr/share/nginx/html/images/
 COPY SCC-2.png /usr/share/nginx/html/images/
