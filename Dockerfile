@@ -147,7 +147,7 @@ COPY styles.css /usr/share/nginx/html/
 COPY hls.js /usr/share/nginx/html/
 COPY images/OCP-Topology.png /usr/share/nginx/html/
 COPY images/MinIO-Browser-m.png /usr/share/nginx/html/
-COPY images/SCC-1.png /usr/share/nginx/html/
+COPY images/SCC-1.png /usr/share/nginx/html/images/
 COPY images/SCC-2.png /usr/share/nginx/html/
 COPY images/SCC-3.png /usr/share/nginx/html/
 COPY images/image1.PNG /usr/share/nginx/html/
