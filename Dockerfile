@@ -136,7 +136,6 @@ RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
     && ln -sf /dev/stdout /var/log/nginx/access.log \
     && ln -sf /dev/stderr /var/log/nginx/error.log
 
-RUN mkdir /usr/share/nginx/html/images/
 
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY hello.conf /etc/nginx/conf.d/
@@ -145,20 +144,20 @@ COPY intro.html /usr/share/nginx/html/
 COPY useCases.html /usr/share/nginx/html/
 COPY styles.css /usr/share/nginx/html/
 COPY hls.js /usr/share/nginx/html/
-COPY images/OCP-Topology.png /usr/share/nginx/html/images/
-COPY images/MinIO-Browser-m.png /usr/share/nginx/html/images/
-COPY images/SCC-1.png /usr/share/nginx/html/images/
-COPY images/SCC-2.png /usr/share/nginx/html/images/
-COPY images/SCC-3.png /usr/share/nginx/html/images/
-COPY images/image1.PNG /usr/share/nginx/html/images/
-COPY images/image2.PNG /usr/share/nginx/html/images/
-COPY images/image3.PNG /usr/share/nginx/html/images/
-COPY images/bigTwin_image.PNG /usr/share/nginx/html/images/
-COPY images/BigTwin_edsff.PNG /usr/share/nginx/html/images/
-COPY images/BigTwin_Server.PNG /usr/share/nginx/html/images/
-COPY images/hardware_tour.PNG /usr/share/nginx/html/images/
-COPY images/Super_Micro_Computer_Logo.svg.png /usr/share/nginx/html/images/
-COPY images/logos-red-hat-intel-v2.png /usr/share/nginx/html/images/
+COPY images/OCP-Topology.png /usr/share/nginx/html/
+COPY images/MinIO-Browser-m.png /usr/share/nginx/html/
+COPY images/SCC-1.png /usr/share/nginx/html/
+COPY images/SCC-2.png /usr/share/nginx/html/
+COPY images/SCC-3.png /usr/share/nginx/html/
+COPY images/image1.PNG /usr/share/nginx/html/
+COPY images/image2.PNG /usr/share/nginx/html/
+COPY images/image3.PNG /usr/share/nginx/html/
+COPY images/bigTwin_image.PNG /usr/share/nginx/html/
+COPY images/BigTwin_edsff.PNG /usr/share/nginx/html/
+COPY images/BigTwin_Server.PNG /usr/share/nginx/html/
+COPY images/hardware_tour.PNG /usr/share/nginx/html/
+COPY images/Super_Micro_Computer_Logo.svg.png /usr/share/nginx/html/
+COPY images/logos-red-hat-intel-v2.png /usr/share/nginx/html/
 COPY NooBaa_MCG.gif /usr/share/nginx/html/
 COPY MCG-SMC-RH-OpenShift-3-node-compact-cluster.gif /usr/share/nginx/html/
 
