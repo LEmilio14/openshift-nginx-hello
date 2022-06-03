@@ -87,9 +87,9 @@
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="false" touch=true>
       <div class="carousel-inner">
         <div class="carousel-item active"> -->
-<center>
-  <video height="600" id="video" controls autoplay loop muted class="videoCentered"></video>
-</center>
+  <center>
+    <video height="600" id="video" controls autoplay loop muted class="videoCentered"></video>
+  </center>
 
 
   <!-- <br>
@@ -139,8 +139,8 @@
     if (Hls.isSupported()) {
       var video = document.getElementById('video');
       var hls = new Hls();
-      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/SupermicroCDN.mp4,.urlset/master.m3u8');
-      // hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/smc,360p.mp4,480p.mp4,720p.mp4,1080p.mp4,.en_US.vtt,.urlset/master.m3u8');
+      // hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/SupermicroCDN.mp4,.urlset/master.m3u8');
+      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/smc,360p.mp4,480p.mp4,720p.mp4,1080p.mp4,.en_US.vtt,.urlset/master.m3u8');
       hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED, function() {
         video.play();
@@ -150,8 +150,8 @@
     // When the browser has built-in HLS support (check using `canPlayType`), we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video element throught the `src` property.
     // This is using the built-in support of the plain video element, without using hls.js.
     else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/SupermicroCDN.mp4,.urlset/master.m3u8';
-      // video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/smc,360p.mp4,480p.mp4,720p.mp4,1080p.mp4,.en_US.vtt,.urlset/master.m3u8';
+      // video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/SupermicroCDN.mp4,.urlset/master.m3u8';
+      video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/smc,360p.mp4,480p.mp4,720p.mp4,1080p.mp4,.en_US.vtt,.urlset/master.m3u8';
       video.addEventListener('canplay', function() {
         video.play();
       });
@@ -339,71 +339,185 @@
 
   </section>
 
-  <!-- Modal for CDN Video-->
+  <!-- Pop-up Modal for CDN Video-->
   <div class="modal fade" id="cdnVideo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-dialog modal-lg ">
       <div class="modal-content">
         <div class="modal-body">
-          <iframe width=100% height="500px" src="https://www.youtube.com/embed/iDxEm_ih_M0" frameborder="0" allowfullscreen></iframe>
+          <video id="supermicrocdnVideo" controls autoplay loop muted class="videoCentered"></video>
+          <!-- <iframe id="supermicrocdnVideo" width=100% height="500px" frameborder="0" src="" allowfullscreen controls autoplay loop muted class="videoCentered"></iframe> -->
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Modal for BigTwin Video-->
+  <!-- Script for CDN modal -->
+  <script type="text/javascript">
+    if (Hls.isSupported()) {
+      var video = document.getElementById('supermicrocdnVideo');
+      var hls = new Hls();
+      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/SupermicroCDN.mp4,.urlset/master.m3u8');
+      hls.attachMedia(video);
+      hls.on(Hls.Events.MANIFEST_PARSED, function() {
+        video.play();
+      });
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/SupermicroCDN.mp4,.urlset/master.m3u8';
+      video.addEventListener('canplay', function() {
+        video.play();
+      });
+    }
+  </script>
+
+  <!-- Pop-up Modal for BigTwin Video-->
   <div class="modal fade" id="BigTwin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-body">
-          <iframe width=100% height="500px" src="https://www.youtube.com/embed/BobQ8KkfRzE" frameborder="0" allowfullscreen></iframe>
+          <video id="bigtwinVideo" controls autoplay loop muted class="videoCentered"></video>
+          <!-- <iframe width=100% height="500px" src="https://www.youtube.com/embed/BobQ8KkfRzE" frameborder="0" allowfullscreen></iframe> -->
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Modal for Hardware Tour Video-->
+  <!-- Script for BigTwin modal -->
+  <script type="text/javascript">
+    if (Hls.isSupported()) {
+      var video = document.getElementById('bigtwinVideo');
+      var hls = new Hls();
+      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/Supermicro_BigTwin.mp4,.urlset/master.m3u8');
+      hls.attachMedia(video);
+      hls.on(Hls.Events.MANIFEST_PARSED, function() {
+        video.play();
+      });
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/Supermicro_BigTwin.mp4,.urlset/master.m3u8';
+      video.addEventListener('canplay', function() {
+        video.play();
+      });
+    }
+  </script>
+
+  <!-- Pop-up Modal for Hardware Tour Video-->
   <div class="modal fade" id="Hardware" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-body">
-          <iframe width=100% height="500px" src="https://www.youtube.com/embed/pYObkWrbZhA" frameborder="0" allowfullscreen></iframe>
+          <video id="hardwaretourVideo" controls autoplay loop muted class="videoCentered"></video>
+          <!-- <iframe width=100% height="500px" src="https://www.youtube.com/embed/pYObkWrbZhA" frameborder="0" allowfullscreen></iframe> -->
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Modal for Arctic Sound Video-->
+  <!-- Script for Hardware Tour modal -->
+  <script type="text/javascript">
+    if (Hls.isSupported()) {
+      var video = document.getElementById('hardwaretourVideo');
+      var hls = new Hls();
+      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/BigTwin_HardwareTour.mp4,.urlset/master.m3u8');
+      hls.attachMedia(video);
+      hls.on(Hls.Events.MANIFEST_PARSED, function() {
+        video.play();
+      });
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/BigTwin_HardwareTour.mp4,.urlset/master.m3u8';
+      video.addEventListener('canplay', function() {
+        video.play();
+      });
+    }
+  </script>
+
+  <!-- Pop-up Modal for Arctic Sound Video-->
   <div class="modal fade" id="Arctic" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-body">
-          <iframe width=100% height="500px" src="https://www.youtube.com/embed/F_JOrSolats" frameborder="0" allowfullscreen></iframe>
+          <video id="arcticVideo" controls autoplay loop muted class="videoCentered"></video>
+          <!-- <iframe width=100% height="500px" src="https://www.youtube.com/embed/F_JOrSolats" frameborder="0" allowfullscreen></iframe> -->
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Modal for BigTwin Server Video-->
+  <!-- Script for Arctic Sound modal -->
+  <script type="text/javascript">
+    if (Hls.isSupported()) {
+      var video = document.getElementById('arcticVideo');
+      var hls = new Hls();
+      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/Arctic_Sound.mp4,.urlset/master.m3u8');
+      hls.attachMedia(video);
+      hls.on(Hls.Events.MANIFEST_PARSED, function() {
+        video.play();
+      });
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/Arctic_Sound.mp4,.urlset/master.m3u8';
+      video.addEventListener('canplay', function() {
+        video.play();
+      });
+    }
+  </script>
+
+  <!-- Pop-up Modal for BigTwin Server Video-->
   <div class="modal fade" id="BigTwin_Server" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-body">
-          <iframe width=100% height="500px" src="https://www.youtube.com/embed/lB0UGcWbIO0" frameborder="0" allowfullscreen></iframe>
+          <video id="bigtwinServerVideo" controls autoplay loop muted class="videoCentered"></video>
+          <!-- <iframe width=100% height="500px" src="https://www.youtube.com/embed/lB0UGcWbIO0" frameborder="0" allowfullscreen></iframe> -->
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Modal for BigTwin EDSFF Video-->
+  <!-- Script for BigTwin Server modal -->
+  <script type="text/javascript">
+    if (Hls.isSupported()) {
+      var video = document.getElementById('bigtwinServerVideo');
+      var hls = new Hls();
+      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/BigTwin_Server.mp4,.urlset/master.m3u8');
+      hls.attachMedia(video);
+      hls.on(Hls.Events.MANIFEST_PARSED, function() {
+        video.play();
+      });
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/BigTwin_Server.mp4,.urlset/master.m3u8';
+      video.addEventListener('canplay', function() {
+        video.play();
+      });
+    }
+  </script>
+
+  <!-- Pop-up Modal for BigTwin EDSFF Video-->
   <div class="modal fade" id="BigTwin_edsff" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-body">
-          <iframe width=100% height="500px" src="https://www.youtube.com/embed/dDYTbXzjYc0" frameborder="0" allowfullscreen></iframe>
+          <video id="bigtwinedsffVideo" controls autoplay loop muted class="videoCentered"></video>
+          <!-- <iframe width=100% height="500px" src="https://www.youtube.com/embed/dDYTbXzjYc0" frameborder="0" allowfullscreen></iframe> -->
         </div>
       </div>
     </div>
   </div>
+
+  <!-- Script for BigTwin EDSFF modal -->
+  <script type="text/javascript">
+    if (Hls.isSupported()) {
+      var video = document.getElementById('bigtwinedsffVideo');
+      var hls = new Hls();
+      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/BigTwin_edsff.mp4,.urlset/master.m3u8');
+      hls.attachMedia(video);
+      hls.on(Hls.Events.MANIFEST_PARSED, function() {
+        video.play();
+      });
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/BigTwin_edsff.mp4,.urlset/master.m3u8';
+      video.addEventListener('canplay', function() {
+        video.play();
+      });
+    }
+  </script>
 
 
 

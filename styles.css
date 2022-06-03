@@ -137,16 +137,22 @@ li.nav-item a:hover:not(.active) {
 .modal-content {
   background: transparent !important;
   border: none !important;
+  justify-content: center;
 }
 
 .carousel-control-next, .carousel-control-prev {
   width: 7%;
 }
 
-/* .videoCentered {
-  height: 700px;
-} */
+.videoCentered {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+}
 
+.modal-content {
+  right: 55px;
+}
 /* .intro_carousel {
   background-color: #2C3333;
 } */
