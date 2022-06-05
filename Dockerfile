@@ -138,7 +138,7 @@ RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
 
 RUN mkdir /usr/share/nginx/html/images
 
-COPY Super_Micro_Computer_Logo.svg.png /usr/share/nginx/html/images/
+COPY images/Super_Micro_Computer_Logo.svg.png /usr/share/nginx/html/images/
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY hello.conf /etc/nginx/conf.d/
 COPY index.html /usr/share/nginx/html/
