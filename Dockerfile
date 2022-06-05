@@ -136,14 +136,15 @@ RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
     && ln -sf /dev/stdout /var/log/nginx/access.log \
     && ln -sf /dev/stderr /var/log/nginx/error.log
 
-RUN mkdir /usr/share/nginx/html/images
+RUN mkdir /usr/share/nginx/html/images \
+    && mkdir /usr/share/nginx/html/css
 
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY hello.conf /etc/nginx/conf.d/
 COPY index.html /usr/share/nginx/html/
 COPY intro.html /usr/share/nginx/html/
 COPY useCases.html /usr/share/nginx/html/
-COPY styles.css /usr/share/nginx/html/
+COPY css/styles.css /usr/share/nginx/html/css/
 COPY hls.js /usr/share/nginx/html/
 COPY images/Super_Micro_Computer_Logo.svg.png /usr/share/nginx/html/images/
 COPY images/OCP-Topology.png /usr/share/nginx/html/images/
