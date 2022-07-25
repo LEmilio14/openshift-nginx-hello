@@ -159,7 +159,7 @@ COPY images/image3.PNG /usr/share/nginx/html/images/
 COPY images/bigTwin_image.PNG /usr/share/nginx/html/images/
 COPY images/BigTwin_edsff.PNG /usr/share/nginx/html/images/
 COPY images/BigTwin_Server.PNG /usr/share/nginx/html/images/
-COPY images/superflix_logo.png /user/share/nginx/html/images/
+COPY images/superflix_logo.png /usr/share/nginx/html/images/
 COPY images/hardware_tour.PNG /usr/share/nginx/html/images/
 COPY images/logos-red-hat-intel-v2.png /usr/share/nginx/html/images/
 COPY images/NooBaa_MCG.gif /usr/share/nginx/html/images/
