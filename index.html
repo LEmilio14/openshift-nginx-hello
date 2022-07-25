@@ -14,13 +14,6 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 
-  <!-- Owl Carousel -->
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-    crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
-    crossorigin="anonymous" /> -->
-
 
   <link rel="stylesheet" href="css/styles.css" type="text/css">
 
@@ -72,8 +65,8 @@
         <!-- <li class="nav-item"><a class="nav-link" href="#sponsors">Sponsors</a></li> -->
       </ul>
       <form class="d-flex me-5" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input id="searchbar" onkeyup="search_video()" class="form-control me-2" type="search" placeholder="Title, Product, PM" aria-label="Search">
+        <!-- <button class="btn btn-dark" type="submit">Search</button> -->
       </form>
     </div>
   </nav>
@@ -81,7 +74,6 @@
 
   <!-- HLS Script for Videos -->
   <script src="hls.js"></script>
-
 
   <center class="video_center">
     <video height="600" id="video" controls autoplay loop muted class="videoCentered"></video>
@@ -294,7 +286,7 @@
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-body">
-          <video id="supermicrocdnVideo" controls autoplay loop muted class="videoCentered"></video>
+          <video id="supermicrocdnVideo" controls autoplay loop muted class="modal_video"></video>
           <!-- <iframe id="supermicrocdnVideo" width=100% height="500px" frameborder="0" src="" allowfullscreen controls autoplay loop muted class="videoCentered"></iframe> -->
         </div>
       </div>
@@ -324,7 +316,7 @@
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-body">
-          <video id="bigtwinVideo" controls autoplay loop muted class="videoCentered"></video>
+          <video id="bigtwinVideo" controls autoplay loop muted class="modal_video"></video>
           <!-- <iframe width=100% height="500px" src="https://www.youtube.com/embed/BobQ8KkfRzE" frameborder="0" allowfullscreen></iframe> -->
         </div>
       </div>
@@ -354,7 +346,7 @@
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-body">
-          <video id="hardwaretourVideo" controls autoplay loop muted class="videoCentered"></video>
+          <video id="hardwaretourVideo" controls autoplay loop muted class="modal_video"></video>
           <!-- <iframe width=100% height="500px" src="https://www.youtube.com/embed/pYObkWrbZhA" frameborder="0" allowfullscreen></iframe> -->
         </div>
       </div>
@@ -384,7 +376,7 @@
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-body">
-          <video id="arcticVideo" controls autoplay loop muted class="videoCentered"></video>
+          <video id="arcticVideo" controls autoplay loop muted class="modal_video"></video>
           <!-- <iframe width=100% height="500px" src="https://www.youtube.com/embed/F_JOrSolats" frameborder="0" allowfullscreen></iframe> -->
         </div>
       </div>
@@ -414,7 +406,7 @@
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-body">
-          <video id="bigtwinServerVideo" controls autoplay loop muted class="videoCentered"></video>
+          <video id="bigtwinServerVideo" controls autoplay loop muted class="modal_video"></video>
           <!-- <iframe width=100% height="500px" src="https://www.youtube.com/embed/lB0UGcWbIO0" frameborder="0" allowfullscreen></iframe> -->
         </div>
       </div>
@@ -444,7 +436,7 @@
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-body">
-          <video id="bigtwinedsffVideo" controls autoplay loop muted class="videoCentered"></video>
+          <video id="bigtwinedsffVideo" controls autoplay loop muted class="modal_video"></video>
           <!-- <iframe width=100% height="500px" src="https://www.youtube.com/embed/dDYTbXzjYc0" frameborder="0" allowfullscreen></iframe> -->
         </div>
       </div>
@@ -466,6 +458,24 @@
       video.addEventListener('canplay', function() {
         video.play();
       });
+    }
+  </script>
+
+  <script>
+    function search_video() {
+    let input = document.getElementById('searchbar').value
+    // input = input.toLowerCase();
+    // document.write(input);
+    let x = document.getElementsByClassName('modal_video');
+    // document.write(x.item);
+    for (i = 0; i < x.length; i++) { 
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+          x[i].style.display="none";
+        }
+        else {
+          x[i].style.display="inline";             
+        }
+      }
     }
   </script>
 

@@ -4,20 +4,21 @@ body {
         font-weight: 100;
         height: 100%;
         color: #0f1419;
-        background-color: #222;
+        background-color: #100F0F;
 }
 
 .video_center {
-  background-color: #222;
+  background-color: black;
 }
 
 .navbar_class {
-  background-color: #222;
+  background-color: black;
 }
 
 .navbar {
-    --bs-navbar-color: #180A0A;
-    --bs-navbar-hover-color: Green;
+    --bs-navbar-color: white;
+    font-weight: 100;
+    --bs-navbar-hover-color: grey;
 }
 
 .sponsors_section{
@@ -93,6 +94,11 @@ div.check {
     bottom: 100px;
     padding: 0px 0px 10px 10px;
     width: 100%;
+}
+
+#searchbar {
+  background-color: black;
+  color: white;
 }
 
 #center {
