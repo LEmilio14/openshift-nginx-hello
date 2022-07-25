@@ -74,7 +74,6 @@ RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
     hkp://keyserver.ubuntu.com:80 \
     hkp://p80.pool.sks-keyservers.net:80 \
     pgp.mit.edu \
-    ipv4.pool.sks-keyservers.net \
     ; do \
     echo "Fetching GPG key $GPG_KEYS from $server"; \
     gpg --keyserver "$server" --keyserver-options timeout=10 --recv-keys "$GPG_KEYS" && found=yes && break; \
