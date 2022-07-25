@@ -135,7 +135,8 @@ RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
     # forward request and error logs to docker log collector
     && ln -sf /dev/stdout /var/log/nginx/access.log \
     && ln -sf /dev/stderr /var/log/nginx/error.log
-
+    
+RUN apk update
 RUN mkdir /usr/share/nginx/html/images \
     && mkdir /usr/share/nginx/html/css
 
