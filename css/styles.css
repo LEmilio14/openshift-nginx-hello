@@ -21,6 +21,10 @@ body {
     --bs-navbar-hover-color: grey;
 }
 
+.h2_intro_cases {
+  color: #E8EAE6;
+}
+
 .sponsors_section{
   background-color: #222;
   /* background-color: #205375; */
