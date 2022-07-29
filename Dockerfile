@@ -151,7 +151,7 @@ COPY images/OCP-Topology.png /usr/share/nginx/html/images/
 COPY images/MinIO-Browser-m.png /usr/share/nginx/html/images/
 COPY images/jbof.png /usr/share/nginx/html/images/
 COPY images/Petascale.png /usr/share/nginx/html/images/
-COPY images/storageReview_36bay.png /usr/share/nginx/html/images/
+COPY images/storagereview_36bay.png /usr/share/nginx/html/images/
 COPY images/Supermicro_60_90_bay.png /usr/share/nginx/html/images/
 COPY images/Supermicroe1L.png /usr/share/nginx/html/images/
 COPY images/Top_loading_lineup.png /usr/share/nginx/html/images/
