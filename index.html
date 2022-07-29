@@ -75,7 +75,7 @@
   <!-- HLS Script for Videos -->
   <script src="hls.js"></script>
 
-  <center class="video_center">
+  <center id="startVideo" class="video_center">
     <video height="600" id="video" controls autoplay loop muted class="videoCentered"></video>
   </center>
 
@@ -461,22 +461,33 @@
     }
   </script>
 
-  <script>
-    function search_video() {
-    let input = document.getElementById('searchbar').value
-    // input = input.toLowerCase();
-    // document.write(input);
-    let x = document.getElementsByClassName('modal_video');
-    // document.write(x.item);
-    for (i = 0; i < x.length; i++) { 
-        if (!x[i].innerHTML.toLowerCase().includes(input)) {
-          x[i].style.display="none";
-        }
-        else {
-          x[i].style.display="inline";             
-        }
+<script>
+  function search_video() {
+    // Declare variables
+    var input, filter, a, i, txtValue, startVideo, carousel_element;
+    startVideo = document.getElementById('startVideo');
+    startVideo.style.display = 'none';
+    // startVideo.hidden = true;
+    input = document.getElementById('searchbar');
+    filter = input.value.toUpperCase();
+    cards = document.getElementsByClassName("card");
+    // li = modal.getElementById .getElementsByTagName('li');
+    for (i = 0; i < cards.length; i++) {
+      cards[i].hidden = false;
+    }
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < cards.length; i++) {
+      a = cards[i].getElementsByTagName("h4")[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        cards[i].style.display = "";
+      } else {
+        cards[i].hidden = true;
+        // carousel_element.innerHTML = cards[i];
+        // cards[i].style.display = "inline-block";
       }
     }
+  }
   </script>
 
   <br>
