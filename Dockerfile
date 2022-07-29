@@ -136,7 +136,6 @@ RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
     && ln -sf /dev/stdout /var/log/nginx/access.log \
     && ln -sf /dev/stderr /var/log/nginx/error.log
     
-RUN apk update
 RUN mkdir /usr/share/nginx/html/images \
     && mkdir /usr/share/nginx/html/css
 
@@ -150,6 +149,12 @@ COPY hls.js /usr/share/nginx/html/
 COPY images/Super_Micro_Computer_Logo.svg.png /usr/share/nginx/html/images/
 COPY images/OCP-Topology.png /usr/share/nginx/html/images/
 COPY images/MinIO-Browser-m.png /usr/share/nginx/html/images/
+COPY images/jbof.png /usr/share/nginx/html/images/
+COPY images/Petascale.png /usr/share/nginx/html/images/
+COPY images/storageReview_36bay.png /usr/share/nginx/html/images/
+COPY images/Supermicro_60_90_bay.png /usr/share/nginx/html/images/
+COPY images/Supermicroe1L.png /usr/share/nginx/html/images/
+COPY images/Top_loading_lineup.png /usr/share/nginx/html/images/
 COPY images/SCC-1.png /usr/share/nginx/html/images/
 COPY images/SCC-2.png /usr/share/nginx/html/images/
 COPY images/SCC-3.png /usr/share/nginx/html/images/
