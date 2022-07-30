@@ -4,7 +4,8 @@ LABEL maintainer="SMC Cloud Architect"
 
 ENV NGINX_VERSION 1.16.1
 
-RUN apk update
+RUN sed -i -e 's/http:/https:/' /etc/apk/repositories
+
 RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
     && CONFIG="\
     --prefix=/etc/nginx \
